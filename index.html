@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon | Professional Underside Cleaning</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-placeholder">
+      <!-- User can add their image here in CSS or as an img tag later -->
+    </div>
+
+    <div class="overlay"></div>
+
+    <main class="container">
+      <header class="hero">
+        <div class="status-badge">Full Site Coming Soon</div>
+        <h1>Professional Underside Cleaning</h1>
+        <div class="divider"></div>
+        <p class="subtitle">We protect your vehicle from the bottom up.</p>
+      </header>
+
+      <div class="content-grid">
+        <section class="info-card">
+          <h2>What We Do</h2>
+          <p>
+            We provide professional undercarriage cleaning for cars, vans and
+            fleets. High-pressure washing removes mud, oil and road salt, and we
+            can apply a protective coating to help prevent rust and corrosion.
+          </p>
+        </section>
+
+        <section class="info-card">
+          <h2>Where We Are</h2>
+          <p>
+            Based in Croydon and easy to reach from South London and Surrey.
+          </p>
+          <address>
+            Unit 1, 2 Endeavour Way,
+            <br />
+            Croydon CR0 4TR
+          </address>
+        </section>
+      </div>
+
+      <section class="contact-section">
+        <h2>Get In Touch</h2>
+        <form id="storeLead" class="contact-form">
+          <div class="input-group lqd-column">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="input-group lqd-column">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="input-group lqd-column">
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              placeholder="Your Phone Number"
+              required
+            />
+          </div>
+          <div class="input-group full-width lqd-column">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="How can we help you?"
+              rows="3"
+            ></textarea>
+          </div>
+          <button type="submit" id="submitButton" class="submit-btn">
+            Send Message
+          </button>
+        </form>
+
+        <div class="contact-or">
+          <span>OR</span>
+        </div>
+
+        <div class="call-us">
+          <p>Call us directly:</p>
+          <a href="tel:+1234567890" class="phone-number">020 8050 2831</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

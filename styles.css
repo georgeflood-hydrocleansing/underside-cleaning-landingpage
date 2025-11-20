@@ -1,0 +1,298 @@
+:root {
+  --primary-color: #ff6b00; /* Industrial Orange */
+  --secondary-color: #263238; /* Dark Steel */
+  --bg-color: #121212; /* Very Dark Grey */
+  --card-bg: #1e1e1e;
+  --text-color: #eceff1;
+  --text-muted: #b0bec5;
+  --border-color: #37474f;
+
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  --transition: all 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background Placeholder */
+.bg-placeholder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+
+  /* Layer 1: Subtle grunge texture pattern (on top) */
+  /* Layer 2: The main image */
+  background-image: radial-gradient(#263238 1px, transparent 1px),
+    url('images/underside-cleaning.jpg');
+
+  /* Size for each layer */
+  background-size: 20px 20px, cover;
+
+  /* Position for each layer */
+  background-position: 0 0, center;
+
+  /* Repeat behavior for each layer */
+  background-repeat: repeat, no-repeat;
+
+  opacity: 0.3;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.95) 0%,
+    rgba(18, 18, 18, 0.8) 100%
+  );
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  margin-bottom: 4rem;
+}
+
+.status-badge {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #000;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.divider {
+  width: 80px;
+  height: 6px;
+  background-color: var(--primary-color);
+  margin: 0 auto 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.info-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-left: 4px solid var(--primary-color);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.info-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.info-card p,
+.info-card address {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-style: normal;
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--card-bg);
+  padding: 3rem;
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--primary-color);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section > p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #2c2c2c;
+  border: 2px solid transparent;
+  border-bottom: 2px solid var(--border-color);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-bottom-color: var(--primary-color);
+  background: #333;
+}
+
+.submit-btn {
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+}
+
+.submit-btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.contact-or {
+  text-align: center;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.contact-or::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-color);
+  z-index: 0;
+}
+
+.contact-or span {
+  background: var(--card-bg);
+  padding: 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.call-us {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.call-us p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.phone-number {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.phone-number:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive Typography */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .info-card,
+  .contact-section {
+    padding: 1.5rem;
+  }
+}
